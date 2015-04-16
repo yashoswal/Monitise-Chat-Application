@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChatApp</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src="application.js"></script>
+<link rel='stylesheet' href='style.css' />
+<link rel='stylesheet' href='bootstrap.min.css' />
+
+</head>
+
+<body onload = init() style="background:white;max-width:800px">
+<center>
+	<div id = "maindiv" class="row" style="padding-right: 25px;background:rgb(0, 178, 255);">
+	
+		<div id ="loadConversation" class="col-md-12">
+			<label id="chat_text"></label>
+			<input type="hidden" id="chat_id" />
+		</div>
+		
+		<div class="col-md-10">
+			<input type="text" class="form-control" name="conversation_text"
+				id="conversation_text" placeholder="Post Comment.." style="color: black;"
+				onkeydown="if (event.keyCode == 13) document.getElementById('submitThis').click();" autocomplete="off" />
+		</div>
+		
+		<div class="col-md-2">
+			<input type="button" onclick="postChat()" class="btn btn-default" name="submitThis" id="submitThis"
+				value="Send" />
+		</div>
+
+	</div>
+</center>
+</body>
+</html>
